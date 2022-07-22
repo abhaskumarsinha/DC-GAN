@@ -1,13 +1,13 @@
 # DC-GAN
-A very simple and plain DC GAN to generate Image Flower Pictures out of dataset. 
+A very simple and plain DC GAN to generate Image Flower Pictures out of the dataset. 
 
 
 ## Dataset
-Only a sample hundred data have been provided, which isn't enough to actually generate GAN Images. So, kindly full flower dataset and place it in `. /flowers` directory since: http://chaladze.com/l5/ (Linnaeus, 5 dataset Project).
+Only a sample hundred data have been provided, which isn't enough to generate GAN Images. So, kindly full flower dataset and place it in `. /flowers` directory since: http://chaladze.com/l5/ (Linnaeus, 5 dataset Project).
 We demonstrate MNIST Fashion Database for the same.
 
 ## Abstract
-DC GAN or Deep Convolutional - GAN is a special case of GAN that uses multiple Convolutional Layers in deep nets in the form of Convolutional layers in Discriminator and Transpose Convolutional Layers in Generators (Basically they are reverse of Classical Convolutional Layers [1]). The basic advantage DC GANs provide over Classical GANs is tackling Mode Collapse during image training [2]. We use `tanh, sigmoid, relu, selu` activation functions provided from Keras in TensorFlow v2.0. 
+DC GAN or Deep Convolutional - GAN is a special case of GAN that uses multiple Convolutional Layers in deep nets in the form of Convolutional layers in Discriminator and Transpose Convolutional Layers in Generators (Basically they are reverse of Classical Convolutional Layers [1]). The basic advantage DC GANs provide over Classical GANs is tackling Mode Collapse during image training [2]. We use `tanh, sigmoid, relu, selu` activation functions provided by Keras in TensorFlow v2.0. 
 **Please Note: The `Conv2DTranspose()` layer provided in Keras is different from Upsampling2D Layer, as the `Conv2DTranspose` layers' kernel weights are learnable during Training epochs. We will be using `Conv2DTranspose()` just for the same reason.** For training steps, kindly refer, 1D-GAN/Classic GAN repo for more details. We implement similar training steps here, except for the case, we train images by batch, `model.train_on_batch()` from Keras, which is an alternate and much simpler way to implement GANs without manually training weights with `gradient_tape()` as in Official Keras Documentation.
 
 ## Results
@@ -30,11 +30,11 @@ https://user-images.githubusercontent.com/31654395/180400996-9b932a1b-9c62-42f2-
 ![download (1)](https://user-images.githubusercontent.com/31654395/180401900-e53ba716-532d-471a-bb1d-e3d8ceee4456.png)
 ![download (2)](https://user-images.githubusercontent.com/31654395/180401918-d21a7082-95b9-4ce2-ba2a-1bd5ab5dcf6b.png)
 
-As we can see from initial results, the GAN Model stared recognisising flowers in its initial stage itself. The shades, boundaries were apparently visible from start itself. The colors started converging to smooth and better gradually and it started converging to blurred flower visuals. 
+As we can see from the initial results, the GAN Model started recognizing flowers in its initial stage itself. The shades and boundaries were visible from start itself. The colors started converging to smooth and better gradually and it started converging into blurred flower visuals. 
 
 For better results, train for 10-15 hours on Google Colab GPU for good convergence. 
 
-## Biblography
+## Bibliography
 
 1. Gao, Hongyang, et al. "Pixel transposed convolutional networks." IEEE transactions on pattern analysis and machine intelligence 42.5 (2019): 1218-1227.
 2. Radford, Alec, Luke Metz, and Soumith Chintala. "Unsupervised representation learning with deep convolutional generative adversarial networks." arXiv preprint arXiv:1511.06434 (2015).
