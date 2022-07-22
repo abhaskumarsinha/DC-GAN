@@ -34,7 +34,7 @@ As we can see from initial results, the GAN Model stared recognisising flowers i
 
 For better results, train for 10-15 hours on Google Colab GPU for good convergence. 
 
-##Biblography
+## Biblography
 
 1. Gao, Hongyang, et al. "Pixel transposed convolutional networks." IEEE transactions on pattern analysis and machine intelligence 42.5 (2019): 1218-1227.
 2. Radford, Alec, Luke Metz, and Soumith Chintala. "Unsupervised representation learning with deep convolutional generative adversarial networks." arXiv preprint arXiv:1511.06434 (2015).
